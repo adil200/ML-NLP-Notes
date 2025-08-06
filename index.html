@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning & NLP Fundamentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <!-- Slide Counter -->
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">28</span>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button id="prev-btn" class="btn btn--secondary">❮ Previous</button>
+            <button id="next-btn" class="btn btn--primary">Next ❯</button>
+        </div>
+
+        <!-- Slides Container -->
+        <div class="slides-wrapper">
+            
+            <!-- Slide 1: Title -->
+            <div class="slide active">
+                <div class="slide-content">
+                    <h1>Machine Learning & Deep Learning</h1>
+                    <h2>Neural Networks & Natural Language Processing</h2>
+                    <div class="title-subtitle">
+                        <p>A Comprehensive Guide to AI Fundamentals</p>
+                    </div>
+                    <div class="title-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1748607352/pplx_project_search_images/c586669f6d7f1e2e61f34e760b8901790ff137b8.jpg" alt="AI vs ML vs DL Comparison">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: What is Machine Learning? -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>What is Machine Learning?</h2>
+                    <div class="definition-box">
+                        <p><strong>Machine Learning</strong> is a branch of artificial intelligence that enables algorithms to uncover hidden patterns within datasets and make predictions without explicit programming for each task.</p>
+                    </div>
+                    <div class="content-columns">
+                        <div class="column">
+                            <h3>Key Characteristics</h3>
+                            <ul>
+                                <li>Learns from data automatically</li>
+                                <li>Improves performance over time</li>
+                                <li>Identifies patterns and relationships</li>
+                                <li>Makes predictions on new data</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1748542891/pplx_project_search_images/bcf2fc2b172eb42317d2948bdaaf35402a6d8285.jpg" alt="AI ML DL Relationship">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Types of Machine Learning -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Types of Machine Learning</h2>
+                    <div class="ml-types">
+                        <div class="type-card">
+                            <h3>Supervised Learning</h3>
+                            <p>Learns from labeled training data to make predictions on new, unseen data</p>
+                            <div class="examples">Examples: Image classification, spam detection</div>
+                        </div>
+                        <div class="type-card">
+                            <h3>Unsupervised Learning</h3>
+                            <p>Discovers hidden patterns in data without labeled examples</p>
+                            <div class="examples">Examples: Clustering, dimensionality reduction</div>
+                        </div>
+                        <div class="type-card">
+                            <h3>Reinforcement Learning</h3>
+                            <p>Learns through interaction with environment via rewards and penalties</p>
+                            <div class="examples">Examples: Game playing, robotics</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: ML Applications -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Machine Learning Applications</h2>
+                    <div class="applications-grid">
+                        <div class="app-item">
+                            <h3>🖼️ Image Recognition</h3>
+                            <p>Identifying objects, faces, and scenes in photos</p>
+                        </div>
+                        <div class="app-item">
+                            <h3>🎯 Recommendation Systems</h3>
+                            <p>Suggesting products, movies, or content</p>
+                        </div>
+                        <div class="app-item">
+                            <h3>🔒 Fraud Detection</h3>
+                            <p>Identifying suspicious transactions and activities</p>
+                        </div>
+                        <div class="app-item">
+                            <h3>🗣️ Speech Recognition</h3>
+                            <p>Converting spoken language to text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Introduction to Deep Learning -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>What is Deep Learning?</h2>
+                    <div class="definition-box">
+                        <p><strong>Deep Learning</strong> is a subset of machine learning that uses neural networks with multiple layers to analyze complex patterns and relationships in data.</p>
+                    </div>
+                    <div class="content-columns">
+                        <div class="column">
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Multiple layers of artificial neurons</li>
+                                <li>Automatic feature learning</li>
+                                <li>Handles complex, high-dimensional data</li>
+                                <li>Inspired by human brain structure</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1748539147/pplx_project_search_images/fdd1bf2d734956940de4b791e80b4c51b7ff1c84.jpg" alt="AI ML DL Hierarchy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Deep Learning vs Traditional ML -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Deep Learning vs Traditional Machine Learning</h2>
+                    <div class="comparison-table">
+                        <div class="comparison-row header">
+                            <div class="aspect">Aspect</div>
+                            <div class="traditional">Traditional ML</div>
+                            <div class="deep">Deep Learning</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="aspect">Data Volume</div>
+                            <div class="traditional">Works with small datasets</div>
+                            <div class="deep">Requires large amounts of data</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="aspect">Feature Engineering</div>
+                            <div class="traditional">Manual feature extraction</div>
+                            <div class="deep">Automatic feature learning</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="aspect">Computational Requirements</div>
+                            <div class="traditional">Lower computational power</div>
+                            <div class="deep">Requires GPUs and high power</div>
+                        </div>
+                        <div class="comparison-row">
+                            <div class="aspect">Accuracy</div>
+                            <div class="traditional">Good for simple tasks</div>
+                            <div class="deep">Higher accuracy for complex tasks</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Neural Networks Architecture -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Neural Network Architecture</h2>
+                    <div class="content-columns">
+                        <div class="column">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1749007636/pplx_project_search_images/beaaf644a9ccad3235540691a61cc7e8da083826.jpg" alt="Neural Network Layers">
+                        </div>
+                        <div class="column">
+                            <h3>Components</h3>
+                            <ul>
+                                <li><strong>Input Layer:</strong> Receives data</li>
+                                <li><strong>Hidden Layers:</strong> Process information</li>
+                                <li><strong>Output Layer:</strong> Produces results</li>
+                                <li><strong>Weights:</strong> Connection strengths</li>
+                                <li><strong>Biases:</strong> Threshold adjustments</li>
+                                <li><strong>Activation Functions:</strong> Non-linear transformations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: How Neural Networks Learn -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>How Neural Networks Learn</h2>
+                    <div class="learning-process">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Forward Propagation</h3>
+                                <p>Data flows through network layers, making predictions</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Loss Calculation</h3>
+                                <p>Measure difference between prediction and actual result</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Backpropagation</h3>
+                                <p>Error signals propagate backward through network</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Weight Updates</h3>
+                                <p>Adjust connections to minimize future errors</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Types of Neural Networks -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Types of Neural Networks</h2>
+                    <div class="nn-types">
+                        <div class="nn-type">
+                            <h3>🔄 Feedforward Networks</h3>
+                            <p>Information flows in one direction from input to output</p>
+                        </div>
+                        <div class="nn-type">
+                            <h3>🖼️ Convolutional Neural Networks (CNN)</h3>
+                            <p>Specialized for processing grid-like data such as images</p>
+                        </div>
+                        <div class="nn-type">
+                            <h3>🔁 Recurrent Neural Networks (RNN)</h3>
+                            <p>Can process sequences by maintaining internal memory</p>
+                        </div>
+                        <div class="nn-type">
+                            <h3>🧠 Long Short-Term Memory (LSTM)</h3>
+                            <p>Advanced RNNs that can learn long-term dependencies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: What is NLP? -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Natural Language Processing (NLP)</h2>
+                    <div class="definition-box">
+                        <p><strong>Natural Language Processing</strong> enables computers to interpret, manipulate, and comprehend human language.</p>
+                    </div>
+                    <div class="content-columns">
+                        <div class="column">
+                            <h3>Core Challenges</h3>
+                            <ul>
+                                <li>Ambiguity in language</li>
+                                <li>Context understanding</li>
+                                <li>Cultural and social nuances</li>
+                                <li>Multiple meanings of words</li>
+                                <li>Grammar variations</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1748595336/pplx_project_search_images/6eb0325ba612e9b2131987d27de79625ad71846d.jpg" alt="NLP Pipeline">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 11: NLP Applications -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>NLP Applications</h2>
+                    <div class="applications-grid">
+                        <div class="app-item">
+                            <h3>🌐 Machine Translation</h3>
+                            <p>Automatically translating text between languages</p>
+                        </div>
+                        <div class="app-item">
+                            <h3>😊 Sentiment Analysis</h3>
+                            <p>Determining emotional tone in text</p>
+                        </div>
+                        <div class="app-item">
+                            <h3>🤖 Chatbots</h3>
+                            <p>Conversational AI systems</p>
+                        </div>
+                        <div class="app-item">
+                            <h3>📝 Text Summarization</h3>
+                            <p>Automatically creating summaries of documents</p>
+                        </div>
+                        <div class="app-item">
+                            <h3>❓ Question Answering</h3>
+                            <p>Automatically answering questions about text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 12: NLP Pipeline -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>The NLP Pipeline</h2>
+                    <div class="pipeline-steps">
+                        <div class="pipeline-step">
+                            <div class="step-number">1</div>
+                            <h3>Text Collection</h3>
+                            <p>Gather raw text data from various sources</p>
+                        </div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-step">
+                            <div class="step-number">2</div>
+                            <h3>Preprocessing</h3>
+                            <p>Clean and standardize the text data</p>
+                        </div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-step">
+                            <div class="step-number">3</div>
+                            <h3>Feature Extraction</h3>
+                            <p>Convert text into numerical representations</p>
+                        </div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-step">
+                            <div class="step-number">4</div>
+                            <h3>Modeling</h3>
+                            <p>Apply machine learning algorithms</p>
+                        </div>
+                        <div class="pipeline-arrow">→</div>
+                        <div class="pipeline-step">
+                            <div class="step-number">5</div>
+                            <h3>Evaluation</h3>
+                            <p>Assess model performance and accuracy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 13: Tokenization -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Tokenization</h2>
+                    <div class="definition-box">
+                        <p><strong>Tokenization</strong> is breaking text into smaller units called tokens (words, subwords, or characters).</p>
+                    </div>
+                    <div class="content-columns">
+                        <div class="column">
+                            <div class="tokenization-example">
+                                <h3>Example</h3>
+                                <div class="input-text">
+                                    <strong>Input:</strong><br>
+                                    "Natural language processing is fascinating!"
+                                </div>
+                                <div class="arrow-down">↓</div>
+                                <div class="output-tokens">
+                                    <strong>Tokens:</strong><br>
+                                    <span class="token">Natural</span>
+                                    <span class="token">language</span>
+                                    <span class="token">processing</span>
+                                    <span class="token">is</span>
+                                    <span class="token">fascinating</span>
+                                    <span class="token">!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1749391421/pplx_project_search_images/eae01faffe45adbb7a01763b2ac5d7af6f6ed3ac.jpg" alt="Tokenization Process">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 14: Types of Tokenization -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Types of Tokenization</h2>
+                    <div class="tokenization-types">
+                        <div class="token-type">
+                            <h3>Word Tokenization</h3>
+                            <p>Split text into individual words</p>
+                            <div class="example">"Hello world" → ["Hello", "world"]</div>
+                        </div>
+                        <div class="token-type">
+                            <h3>Sentence Tokenization</h3>
+                            <p>Split text into sentences</p>
+                            <div class="example">"Hello. How are you?" → ["Hello.", "How are you?"]</div>
+                        </div>
+                        <div class="token-type">
+                            <h3>Subword Tokenization</h3>
+                            <p>Split words into smaller meaningful units</p>
+                            <div class="example">"unhappiness" → ["un", "happy", "ness"]</div>
+                        </div>
+                    </div>
+                    <div class="token-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1748586181/pplx_project_search_images/64c452f808899fd1b676373621cbddde6b5091bc.jpg" alt="Tokenization Examples">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 15: Part-of-Speech (POS) Tagging -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Part-of-Speech (POS) Tagging</h2>
+                    <div class="definition-box">
+                        <p><strong>POS Tagging</strong> assigns grammatical labels (noun, verb, adjective, etc.) to each word in a sentence.</p>
+                    </div>
+                    <div class="pos-example">
+                        <h3>Example: "The quick brown fox jumps"</h3>
+                        <div class="pos-tags">
+                            <div class="pos-word">
+                                <div class="word">The</div>
+                                <div class="tag">DT<br><span class="tag-desc">Determiner</span></div>
+                            </div>
+                            <div class="pos-word">
+                                <div class="word">quick</div>
+                                <div class="tag">JJ<br><span class="tag-desc">Adjective</span></div>
+                            </div>
+                            <div class="pos-word">
+                                <div class="word">brown</div>
+                                <div class="tag">JJ<br><span class="tag-desc">Adjective</span></div>
+                            </div>
+                            <div class="pos-word">
+                                <div class="word">fox</div>
+                                <div class="tag">NN<br><span class="tag-desc">Noun</span></div>
+                            </div>
+                            <div class="pos-word">
+                                <div class="word">jumps</div>
+                                <div class="tag">VBZ<br><span class="tag-desc">Verb</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 16: Named Entity Recognition (NER) -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Named Entity Recognition (NER)</h2>
+                    <div class="definition-box">
+                        <p><strong>NER</strong> identifies and classifies named entities (people, organizations, locations) in text.</p>
+                    </div>
+                    <div class="ner-example">
+                        <h3>Example: "Apple Inc. was founded by Steve Jobs in California"</h3>
+                        <div class="ner-entities">
+                            <div class="entity">
+                                <span class="entity-text org">Apple Inc.</span>
+                                <div class="entity-label">ORGANIZATION</div>
+                            </div>
+                            <span class="normal-text">was founded by</span>
+                            <div class="entity">
+                                <span class="entity-text person">Steve Jobs</span>
+                                <div class="entity-label">PERSON</div>
+                            </div>
+                            <span class="normal-text">in</span>
+                            <div class="entity">
+                                <span class="entity-text location">California</span>
+                                <div class="entity-label">LOCATION</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 17: Sentiment Analysis -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Sentiment Analysis</h2>
+                    <div class="definition-box">
+                        <p><strong>Sentiment Analysis</strong> determines the emotional tone or opinion expressed in text.</p>
+                    </div>
+                    <div class="sentiment-examples">
+                        <div class="sentiment-item positive">
+                            <div class="sentiment-text">"I love this product!"</div>
+                            <div class="sentiment-label">😊 Positive</div>
+                        </div>
+                        <div class="sentiment-item negative">
+                            <div class="sentiment-text">"This movie is terrible"</div>
+                            <div class="sentiment-label">😞 Negative</div>
+                        </div>
+                        <div class="sentiment-item neutral">
+                            <div class="sentiment-text">"The weather is okay today"</div>
+                            <div class="sentiment-label">😐 Neutral</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 18: Stemming vs Lemmatization -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Stemming vs Lemmatization</h2>
+                    <div class="comparison-columns">
+                        <div class="comparison-column">
+                            <h3>Stemming</h3>
+                            <div class="definition">Reduces words to root form using rules</div>
+                            <div class="examples-list">
+                                <div class="example-item">
+                                    <span class="before">running</span> → <span class="after">run</span>
+                                </div>
+                                <div class="example-item">
+                                    <span class="before">better</span> → <span class="after">bett</span>
+                                </div>
+                                <div class="example-item">
+                                    <span class="before">cats</span> → <span class="after">cat</span>
+                                </div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros">✅ Fast and simple</div>
+                                <div class="cons">❌ May create non-words</div>
+                            </div>
+                        </div>
+                        <div class="comparison-column">
+                            <h3>Lemmatization</h3>
+                            <div class="definition">Reduces words to dictionary base form</div>
+                            <div class="examples-list">
+                                <div class="example-item">
+                                    <span class="before">running</span> → <span class="after">run</span>
+                                </div>
+                                <div class="example-item">
+                                    <span class="before">better</span> → <span class="after">good</span>
+                                </div>
+                                <div class="example-item">
+                                    <span class="before">cats</span> → <span class="after">cat</span>
+                                </div>
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros">✅ Produces real words</div>
+                                <div class="cons">❌ Slower, more complex</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 19: Word Embeddings -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Word Embeddings</h2>
+                    <div class="definition-box">
+                        <p><strong>Word Embeddings</strong> are dense vector representations of words that capture semantic relationships and meaning.</p>
+                    </div>
+                    <div class="content-columns">
+                        <div class="column">
+                            <h3>Key Concepts</h3>
+                            <ul>
+                                <li>Words → Dense vectors (e.g., 300 dimensions)</li>
+                                <li>Similar words have similar vectors</li>
+                                <li>Captures semantic relationships</li>
+                                <li>Enables mathematical operations on words</li>
+                            </ul>
+                            <h3>Popular Models</h3>
+                            <ul>
+                                <li>Word2Vec (CBOW, Skip-gram)</li>
+                                <li>GloVe</li>
+                                <li>FastText</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1748600095/pplx_project_search_images/9df4c15254708bc9ad2739bc7fde55ebaf715c8c.jpg" alt="Word Embedding Vectors">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 20: Word Embeddings Visualization -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Word Embeddings in Action</h2>
+                    <div class="embeddings-visual">
+                        <div class="embedding-image">
+                            <img src="https://pplx-res.cloudinary.com/image/upload/v1749312427/pplx_project_search_images/c00c1bafb5c1da53edd94d01cb42875cb8eb567d.jpg" alt="Word Embeddings Clusters">
+                        </div>
+                        <div class="embedding-explanation">
+                            <h3>Semantic Clustering</h3>
+                            <p>Words with similar meanings cluster together in vector space:</p>
+                            <ul>
+                                <li><strong>Cities:</strong> Paris, London, Tokyo</li>
+                                <li><strong>Food:</strong> Pizza, Burger, Pasta</li>
+                                <li><strong>Feelings:</strong> Happy, Sad, Excited</li>
+                                <li><strong>Body Parts:</strong> Hand, Eye, Foot</li>
+                            </ul>
+                            <div class="math-example">
+                                <strong>Vector Arithmetic:</strong><br>
+                                King - Man + Woman ≈ Queen
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 21: Transformers Introduction -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Transformer Models</h2>
+                    <div class="definition-box">
+                        <p><strong>Transformers</strong> are deep learning models that use attention mechanisms to process sequences of data, revolutionizing NLP.</p>
+                    </div>
+                    <div class="transformer-features">
+                        <div class="feature">
+                            <h3>🎯 Attention Mechanism</h3>
+                            <p>Focuses on relevant parts of input sequence</p>
+                        </div>
+                        <div class="feature">
+                            <h3>⚡ Parallel Processing</h3>
+                            <p>Processes entire sequence simultaneously</p>
+                        </div>
+                        <div class="feature">
+                            <h3>🔄 Self-Attention</h3>
+                            <p>Each word attends to all other words in sequence</p>
+                        </div>
+                        <div class="feature">
+                            <h3>📚 Transfer Learning</h3>
+                            <p>Pre-trained models can be fine-tuned for specific tasks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 22: BERT vs GPT -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>BERT vs GPT: Two Transformer Approaches</h2>
+                    <div class="bert-gpt-comparison">
+                        <div class="model-column bert">
+                            <h3>BERT</h3>
+                            <div class="model-full-name">Bidirectional Encoder Representations from Transformers</div>
+                            <div class="model-details">
+                                <div class="detail-item">
+                                    <strong>Architecture:</strong> Encoder-only
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Direction:</strong> Bidirectional (looks both ways)
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Strength:</strong> Understanding context
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Use Cases:</strong>
+                                    <ul>
+                                        <li>Text Classification</li>
+                                        <li>Question Answering</li>
+                                        <li>Named Entity Recognition</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="model-column gpt">
+                            <h3>GPT</h3>
+                            <div class="model-full-name">Generative Pre-trained Transformer</div>
+                            <div class="model-details">
+                                <div class="detail-item">
+                                    <strong>Architecture:</strong> Decoder-only
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Direction:</strong> Unidirectional (left-to-right)
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Strength:</strong> Text generation
+                                </div>
+                                <div class="detail-item">
+                                    <strong>Use Cases:</strong>
+                                    <ul>
+                                        <li>Text Generation</li>
+                                        <li>Creative Writing</li>
+                                        <li>Code Generation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comparison-image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1748541252/pplx_project_search_images/60e86bd391c7a926e252c515ce816ad76803d033.jpg" alt="BERT Architecture">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 23: Real-World Applications - Healthcare -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Real-World Applications: Healthcare</h2>
+                    <div class="application-showcase">
+                        <div class="app-header">
+                            <h3>🏥 Healthcare & Medical AI</h3>
+                        </div>
+                        <div class="app-examples">
+                            <div class="app-example">
+                                <h4>📋 Medical Record Analysis</h4>
+                                <p>NLP extracts key information from unstructured medical notes, helping doctors identify patterns and make better diagnoses.</p>
+                            </div>
+                            <div class="app-example">
+                                <h4>💊 Drug Discovery</h4>
+                                <p>ML algorithms analyze molecular structures and predict drug effectiveness, accelerating the development of new treatments.</p>
+                            </div>
+                            <div class="app-example">
+                                <h4>🔍 Diagnostic Assistance</h4>
+                                <p>Deep learning models analyze medical images (X-rays, MRIs) to detect diseases like cancer with high accuracy.</p>
+                            </div>
+                        </div>
+                        <div class="impact-stats">
+                            <div class="stat">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Accuracy in skin cancer detection</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50%</div>
+                                <div class="stat-label">Reduction in drug discovery time</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 24: Real-World Applications - Finance & Technology -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Applications: Finance & Technology</h2>
+                    <div class="dual-applications">
+                        <div class="app-section">
+                            <h3>💰 Finance</h3>
+                            <div class="app-list">
+                                <div class="app-item">
+                                    <strong>🔒 Fraud Detection:</strong> ML identifies suspicious transactions in real-time
+                                </div>
+                                <div class="app-item">
+                                    <strong>📈 Algorithmic Trading:</strong> AI makes split-second trading decisions
+                                </div>
+                                <div class="app-item">
+                                    <strong>⚖️ Risk Assessment:</strong> Evaluates creditworthiness and loan risks
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-section">
+                            <h3>💻 Technology</h3>
+                            <div class="app-list">
+                                <div class="app-item">
+                                    <strong>🔍 Search Engines:</strong> Understanding user queries and ranking results
+                                </div>
+                                <div class="app-item">
+                                    <strong>🤖 Virtual Assistants:</strong> Siri, Alexa, Google Assistant
+                                </div>
+                                <div class="app-item">
+                                    <strong>🎯 Recommendation Systems:</strong> Netflix, YouTube, Amazon suggestions
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 25: Future of AI & NLP -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>The Future of AI & NLP</h2>
+                    <div class="future-trends">
+                        <div class="trend">
+                            <h3>🚀 Multimodal AI</h3>
+                            <p>Combining text, images, and audio for richer understanding</p>
+                        </div>
+                        <div class="trend">
+                            <h3>🌍 Multilingual Models</h3>
+                            <p>AI that understands and generates text in multiple languages</p>
+                        </div>
+                        <div class="trend">
+                            <h3>⚡ Edge AI</h3>
+                            <p>Running AI models on mobile devices and IoT sensors</p>
+                        </div>
+                        <div class="trend">
+                            <h3>🎯 Few-Shot Learning</h3>
+                            <p>Models that learn new tasks with minimal examples</p>
+                        </div>
+                        <div class="trend">
+                            <h3>🤖 Autonomous Agents</h3>
+                            <p>AI systems that can plan and execute complex tasks</p>
+                        </div>
+                        <div class="trend">
+                            <h3>🔐 Ethical AI</h3>
+                            <p>Focus on fairness, transparency, and responsible AI development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 26: Key Takeaways -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Key Takeaways</h2>
+                    <div class="takeaways">
+                        <div class="takeaway-item">
+                            <div class="takeaway-icon">🧠</div>
+                            <div class="takeaway-content">
+                                <h3>Machine Learning</h3>
+                                <p>Algorithms that learn patterns from data without explicit programming</p>
+                            </div>
+                        </div>
+                        <div class="takeaway-item">
+                            <div class="takeaway-icon">🔥</div>
+                            <div class="takeaway-content">
+                                <h3>Deep Learning</h3>
+                                <p>Multi-layered neural networks for complex pattern recognition</p>
+                            </div>
+                        </div>
+                        <div class="takeaway-item">
+                            <div class="takeaway-icon">🕸️</div>
+                            <div class="takeaway-content">
+                                <h3>Neural Networks</h3>
+                                <p>Interconnected nodes that mimic brain-like information processing</p>
+                            </div>
+                        </div>
+                        <div class="takeaway-item">
+                            <div class="takeaway-icon">💬</div>
+                            <div class="takeaway-content">
+                                <h3>NLP</h3>
+                                <p>Techniques for computers to understand and generate human language</p>
+                            </div>
+                        </div>
+                        <div class="takeaway-item">
+                            <div class="takeaway-icon">🚀</div>
+                            <div class="takeaway-content">
+                                <h3>Transformers</h3>
+                                <p>Revolutionary architecture powering modern language models</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 27: Next Steps -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Next Steps in Your AI Journey</h2>
+                    <div class="learning-path">
+                        <div class="step-category beginner">
+                            <h3>🌱 Beginner</h3>
+                            <ul>
+                                <li>Learn Python programming</li>
+                                <li>Study statistics and linear algebra</li>
+                                <li>Take online ML courses (Coursera, edX)</li>
+                                <li>Practice with datasets (Kaggle)</li>
+                            </ul>
+                        </div>
+                        <div class="step-category intermediate">
+                            <h3>🚀 Intermediate</h3>
+                            <ul>
+                                <li>Build ML projects with scikit-learn</li>
+                                <li>Learn TensorFlow or PyTorch</li>
+                                <li>Work on NLP projects with NLTK/spaCy</li>
+                                <li>Contribute to open-source projects</li>
+                            </ul>
+                        </div>
+                        <div class="step-category advanced">
+                            <h3>🏆 Advanced</h3>
+                            <ul>
+                                <li>Research latest papers (arXiv)</li>
+                                <li>Experiment with transformer models</li>
+                                <li>Deploy models to production</li>
+                                <li>Attend conferences and workshops</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 28: Thank You -->
+            <div class="slide">
+                <div class="slide-content">
+                    <h1>Thank You!</h1>
+                    <div class="thank-you-content">
+                        <h2>Questions & Discussion</h2>
+                        <div class="contact-info">
+                            <p>🎓 Continue learning and exploring AI/ML concepts</p>
+                            <p>🔬 Experiment with real datasets and projects</p>
+                            <p>🤝 Join AI communities and forums</p>
+                            <p>📚 Stay updated with latest research and developments</p>
+                        </div>
+                        <div class="final-message">
+                            <em>"The future belongs to those who understand and shape AI technology"</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
